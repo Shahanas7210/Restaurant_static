@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+    <form action="bootsrap.html">
+        <label for="">Name</label>
+        <input type="text" id="name" ">
+        <br>
+        <br>
+        <br>
+        <span id="m-name"></span>
+
+        <label for="">Phone</label>
+        <input type="number" id="phone" required onkeyup="">
+        <span id="m-number"></span>
+        <br>
+
+        <label for="">Email</label>
+        <input type="email" id="email" required onkeyup="">
+        <span id="m-email"></span>
+        <br>
+        <button type="button" onclick="validationName()">Submit</button>
+
+    </form>
+
+    <script>
+        var m_name = document.getElementById("m-name");
+        var m_phone = document.getElementById("m-phone");
+        var m_email = document.getElementById("m-email");
+
+        function validationName() {
+            var name = document.getElementById("name").value;
+            if (name.length == 0) {
+                m_name.innerHTML = "Enter The Name First";
+                return false;
+            }
+            m_name.innerHTML = '<i class="bi bi-check-circle-fill">'
+            return true;
+        }
+    </script>
+</body>
+
+</html>

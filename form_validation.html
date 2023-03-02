@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <form action="bootsrap.html"  method="get">
+        Password : <input id="pass1" type="text"><br>
+        Re-Enter Password : <input id="pass2" type="text"><br>
+        <button onclick="return passCheck()">Submit</button>
+    </form>
+
+    <script>
+        function passCheck() {
+            var pass1 = document.querySelector("#pass1").value;
+            var pass2 = document.querySelector("#pass2").value;
+            if (pass1 ==null|| pass2 ==null) {
+                alert("Enter the password and renter password");
+                return false;
+            }
+            else if (pass1 ==""|| pass2 =="")  {
+                alert("Enter the pass")
+                return false;
+            }
+            else 
+            return true
+        }
+    </script>
+
+
+</body>
+
+</html>
